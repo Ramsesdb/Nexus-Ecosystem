@@ -1,0 +1,31 @@
+# Ignore environment files with secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Ignore any backup files
+*.bak
+*.backup
+
+# Ignore n8n workflow exports with credentials
+n8n-exports/
+
+# Ignore local IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore any local volumes or data
+volumes/
+data/
+*.db
+*.sqlite
+
+# Ignore Node modules if any scripts added
+node_modules/
