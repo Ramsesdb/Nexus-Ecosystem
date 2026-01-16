@@ -131,7 +131,7 @@ MIT License - feel free to use this as inspiration for your own AI infrastructur
 
 ## 👤 Author
 
-**Ramses De La Cruz** - [ramsesdb.tech](https://ramsesdb.tech)
+**Ramses Briceño** - [ramsesdb.tech](https://ramsesdb.tech)
 
 - GitHub: [@Ramsesdb](https://github.com/Ramsesdb)
-- LinkedIn: [Ramses De La Cruz](https://linkedin.com/in/ramses-de-la-cruz)
+- LinkedIn: [Ramses Briceño](https://linkedin.com/in/ramses-briceño-892745269)
