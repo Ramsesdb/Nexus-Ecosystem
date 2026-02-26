@@ -1,0 +1,42 @@
+---
+description: Use Bun as the runtime, bundler, and package manager for all JavaScript/TypeScript projects in this ecosystem (especially Nexus AI Gateway). Do NOT use Node.js, Vite, npm, or pnpm.
+globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "package.json", "*.config.*"]
+alwaysApply: true
+---
+
+# Use Bun Instead of Node / Vite / npm / pnpm
+
+This ecosystem's backend (Nexus AI Gateway) is built with **Bun**. Always prefer Bun for all runtime, bundling, and package-management tasks.
+
+## Rules
+
+### ✅ DO — Use Bun
+- Run scripts with `bun run <script>`
+- Install packages with `bun add <package>` / `bun remove <package>`
+- Execute TypeScript files directly with `bun <file.ts>`
+- Use `bun build` for bundling (where needed)
+- Use `bun test` for running tests
+- Reference the lockfile `bun.lockb` (commit it to git)
+
+### ❌ DON'T — Avoid These Tools
+| Tool | Replacement |
+|------|-------------|
+| `node <file>` | `bun <file>` |
+| `npm install` | `bun install` |
+| `npm run <script>` | `bun run <script>` |
+| `npx <cmd>` | `bunx <cmd>` |
+| `pnpm install` | `bun install` |
+| `pnpm run <script>` | `bun run <script>` |
+| `vite` / `vite build` | `bun build` (or keep Vite only if a framework requires it) |
+| `ts-node <file>` | `bun <file>` |
+
+### Configuration Files
+- Use `bunfig.toml` for Bun-specific configuration (e.g. registry, test settings).
+- `package.json` is still valid — Bun reads it natively.
+- Do **not** generate `package-lock.json` or `pnpm-lock.yaml`; use `bun.lockb` only.
+
+## Why Bun?
+- **Performance:** Bun starts and executes TypeScript significantly faster than Node.js.
+- **All-in-one:** Runtime + bundler + test runner + package manager in a single binary.
+- **Native TypeScript:** No transpilation step needed; Bun runs `.ts` files directly.
+- **Nixpacks compatible:** Coolify/Railway deployments detect `bun.lockb` and use Bun automatically.
